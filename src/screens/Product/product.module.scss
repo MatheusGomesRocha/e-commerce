@@ -1,6 +1,7 @@
 .container {
     display: flex;
-    height: 100vh;
+    height: calc(100vh - 4rem);
+    margin-top: 4rem;
 
     .sideContent {
         display: flex;
@@ -79,13 +80,13 @@
         align-items: center;
         justify-content: center;
         width: 50%;
-        height: 100vh;
+        height: calc(100vh - 4rem);
         border-left: 1px solid var(--gray-200);
         border-right: 1px solid var(--gray-200);
 
         img {
             cursor: zoom-in;
-            height: 100vh;
+            height: calc(100vh - 4rem);
         }
     }
 
