@@ -1,3 +1,86 @@
 .container {
-    
+    display: flex;
+    flex-direction: column;
+    margin-top: 3.5rem;
+    padding: 0 1rem;
+
+    .logoTitle {
+        display: flex;
+        align-items: center;
+        margin: 2rem 0;
+
+        h1 {
+            margin-right: 1rem;
+        }
+    }
+
+    .searchArea {
+        display: flex;
+        align-items: center;
+
+        .inputArea {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            border: 1px solid var(--gray-200);
+            height: 3.5rem;
+            padding: 0 1rem;
+            border-radius: 2rem;
+
+            input {
+                background-color: transparent;
+                color: var(--black);
+                flex: 1;
+                border: 0;
+                outline: 0;
+                font-size: 1.2rem;
+
+                &::placeholder {
+                    color: var(--gray-200);
+                }
+
+                &:active {
+                    .inputArea {
+                        background-color: red;
+                    }
+                }
+            }
+
+            .searchFilterArea {
+                display: flex;
+                align-items: center;
+                margin-left: auto;
+
+                .searchFilterItem {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: 250ms;
+                    width: 6rem;
+                    height: 2rem;
+                    border-radius: 1rem;
+                    margin-right: .5rem;
+                    
+                    span {
+                        transition: 250ms;
+                    }
+                }
+            }
+        }
+
+        .searchButton {
+            background-color: var(--black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 2rem;
+            margin-left: 1rem;
+
+            &:hover {
+                filter: brightness(0.8);
+            }
+        }
+    }
 }
