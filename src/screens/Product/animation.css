@@ -11,3 +11,8 @@
 #dropdownToggle:hover > #inactiveIcon {
     transform: rotate(90deg);
 }
+
+#currentSize {
+    background-color: var(--black);
+    color: var(--white);
+}

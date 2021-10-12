@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import $ from 'jquery';
+import { AiOutlineHeart } from 'react-icons/ai';
 
 import ImgMen from '../../assets/images/men1.png';
 
@@ -8,6 +9,8 @@ import './animation.css';
 
 export default function Product () {
     const [currentDropdown, setCurrentDropdown] = useState('info');
+    const [currentSize, setCurrentSize] = useState('m');
+    const [currentColor, setCurrentColor] = useState(1);
 
     useEffect(() => {
         if(currentDropdown === 'info') {
@@ -89,10 +92,64 @@ export default function Product () {
             </div>
 
             <div className={styles.imgContainer}>
-                <img src={ImgMen} />
+                <img src={ImgMen} alt="Men with a hoddie" />
             </div>
 
-            <div className={styles.sideContent}></div>
+            <div className={styles.sideContent}>
+                <div className={styles.sideHeader}>
+                    <h2>Choose size</h2>
+
+                    <div className={styles.sideRow}>
+                        <div onClick={() => setCurrentSize('xs')} id={currentSize === 'xs' ? 'currentSize' : undefined} className={styles.sizeItem}>
+                            <span>XS</span>
+                        </div>
+                        <div onClick={() => setCurrentSize('s')} id={currentSize === 's' ? 'currentSize' : undefined} className={styles.sizeItem}>
+                            <span>S</span>
+                        </div>
+                        <div onClick={() => setCurrentSize('m')} id={currentSize === 'm' ? 'currentSize' : undefined} className={styles.sizeItem}>
+                            <span>M</span>
+                        </div>
+                        <div onClick={() => setCurrentSize('l')} id={currentSize === 'l' ? 'currentSize' : undefined} className={styles.sizeItem}>
+                            <span>L</span>
+                        </div>
+                        <div onClick={() => setCurrentSize('xl')} id={currentSize === 'xl' ? 'currentSize' : undefined} className={styles.sizeItem}>
+                            <span>XL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={styles.sideHeader}>
+                    <h2>Choose color</h2>
+
+                    <div className={styles.sideRow}>
+                        <div style={{backgroundColor: '#271919'}} onClick={() => setCurrentColor(1)} className={styles.colorItem}>
+                            <div className={currentColor === 1 ? styles.currentColor : undefined}></div>
+                        </div>
+
+                        <div style={{backgroundColor: '#F9C122'}} onClick={() => setCurrentColor(2)} className={styles.colorItem}>
+                            <div className={currentColor === 2 ? styles.currentColor : undefined}></div>
+                        </div>
+
+                        <div style={{backgroundColor: '#CA0808'}} onClick={() => setCurrentColor(3)} className={styles.colorItem}>
+                            <div className={currentColor === 3 ? styles.currentColor : undefined}></div>
+                        </div>
+
+                        <div style={{backgroundColor: '#548C1D'}} onClick={() => setCurrentColor(4)} className={styles.colorItem}>
+                            <div className={currentColor === 4 ? styles.currentColor : undefined}></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={styles.sideButtonArea}>
+                    <div className={styles.favoriteButton}>
+                        <AiOutlineHeart color="#000" size={25} />
+                    </div>
+
+                    <div className={styles.addCart}>
+                        <span>Add to Cart</span>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
