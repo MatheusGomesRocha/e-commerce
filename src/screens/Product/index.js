@@ -11,19 +11,19 @@ export default function Product () {
 
     useEffect(() => {
         if(currentDropdown === 'info') {
-            $("#hiddenTextInfo").show('normal');
-            $("#hiddenTextDetail").hide('normal');
-            $("#hiddenTextReturn").hide('normal');
+            $("#hiddenTextInfo").show('fast');
+            $("#hiddenTextDetail").hide('fast');
+            $("#hiddenTextReturn").hide('fast');
         } 
         if (currentDropdown === 'detail') {
-            $("#hiddenTextInfo").hide('normal');
-            $("#hiddenTextDetail").show('normal');
-            $("#hiddenTextReturn").hide('normal');
+            $("#hiddenTextInfo").hide('fast');
+            $("#hiddenTextDetail").show('fast');
+            $("#hiddenTextReturn").hide('fast');
         }
         if (currentDropdown === 'return') {
-            $("#hiddenTextInfo").hide('normal');
-            $("#hiddenTextDetail").hide('normal');
-            $("#hiddenTextReturn").show('normal');
+            $("#hiddenTextInfo").hide('fast');
+            $("#hiddenTextDetail").hide('fast');
+            $("#hiddenTextReturn").show('fast');
         }
     }, [currentDropdown]);
 
@@ -60,6 +60,8 @@ export default function Product () {
                         </div>
                     </div>
 
+                    {/* /////////////// */}
+
                     <div className={styles.dropdownItem}>
                         <div onClick={() => setCurrentDropdown('detail')} id="dropdownToggle" className={styles.dropdownToggle}>
                             <span>Details</span>
@@ -70,6 +72,8 @@ export default function Product () {
                             <p id="hiddenTextDetail">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
                     </div>
+
+                    {/* /////////////// */}
 
                     <div className={styles.dropdownItem}>
                         <div onClick={() => setCurrentDropdown('return')} id="dropdownToggle" className={styles.dropdownToggle}>
