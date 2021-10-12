@@ -1,0 +1,13 @@
+#activeIcon {
+    transform: rotate(90deg);
+    transition: 250ms;
+}
+
+#inactiveIcon {
+    transform: rotate(0);
+    transition: 250ms;
+}
+
+#dropdownToggle:hover > #inactiveIcon {
+    transform: rotate(90deg);
+}

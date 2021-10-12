@@ -1,3 +1,86 @@
 .container {
-    
+    display: flex;
+    height: 100vh;
+
+    .sideContent {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        margin: 0 1rem;
+
+        .path {
+            display: flex;
+            width: 90%;
+            margin-top: 2rem;
+
+            span {
+                color: var(--gray-200);
+                margin-right: 1rem;
+
+                &:nth-child(2n + 1) {
+                    cursor: pointer;
+                    transition: 500ms;
+
+                    &:hover {
+                        color: var(--black);
+                    }
+                }
+            }
+        }
+
+        .sideHeader {
+            display: flex;
+            flex-direction: column;
+            margin-top: 2rem;
+
+            h1 {
+                font-size: 2.2rem;
+                line-height: 2.2rem;
+                margin-top: 1rem;
+            }
+        }
+
+        .sideFooter {
+            margin: auto 0 2rem 0;
+
+            .dropdownItem {
+                .dropdownToggle {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    cursor: pointer;
+                    padding: .4rem 0;
+                    border-bottom: 1px solid var(--gray-200);
+                    
+                    span {
+                        font-size: 1.3rem;
+                    }
+                }
+
+                .hiddenText {
+                    margin: 1rem 0;
+                    
+                    p {
+                        color: var(--gray-200);
+                        line-height: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .imgContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 100vh;
+        border-left: 1px solid var(--gray-200);
+        border-right: 1px solid var(--gray-200);
+
+        img {
+            cursor: zoom-in;
+            height: 100vh;
+        }
+    }
 }
