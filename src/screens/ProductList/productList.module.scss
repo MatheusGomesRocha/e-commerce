@@ -198,11 +198,11 @@
                     align-items: center;
                     position: relative;
                     overflow: hidden;
-                    height: 30rem;
+                    height: 25rem;
 
                     img {
                         object-fit: contain;
-                        height: 35rem;
+                        height: 30rem;
                         width: 20rem;
                     }
                 }
@@ -221,7 +221,7 @@
     }
 }
 
-@media(min-width: 1800px) {
+@media(min-width: 2000px) {
     .container {
         padding: 0 25rem;
     }
