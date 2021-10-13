@@ -4,6 +4,7 @@ import './globals.scss';
 
 import Product from './screens/Product';
 import Header from './components/Header';
+import Home from './screens/Home';
 import ProductList from './screens/ProductList';
 import Cart from './screens/Cart';
 
@@ -12,11 +13,13 @@ export default function App () {
     <div>
       <Header />
 
+      <Home />
+
       {/* <Product /> */}
 
       {/* <ProductList /> */}
 
-      <Cart />
+      {/* <Cart /> */}
     </div>
   )
 }
