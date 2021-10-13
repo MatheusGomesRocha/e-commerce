@@ -1,3 +1,158 @@
 .container {
+    .bannerContent {
+        background-color: var(--gray-100);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        height: 70vh;
+        margin-top: 4rem;
     
+        .leftContent {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            margin-right: 15rem;
+    
+            h1 {
+                line-height: 3.5rem;
+            }
+    
+            p {
+                margin-top: .75rem;
+            }
+    
+            .button {
+                background-color: var(--black);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: 250ms;
+                height: 3rem;
+                width: 8rem;
+                border-radius: 2rem;
+                margin-top: 2rem;
+    
+                &:hover {
+                    filter: brightness(0.8);
+                }
+                span {
+                    color: var(--white);
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    
+        img {
+            height: 85vh;
+        }
+    }
+
+    .infoArea{
+        background-color: var(--black);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: calc(30vh - 4rem);
+
+        .infoItem {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 25%;
+
+            h2 {
+                color: var(--white);
+                font-size: 2.5rem;
+            }
+
+            p {
+                color: var(--white);
+            }
+        }
+    }
+
+    .productsArea {
+        margin: 3rem 0;
+
+        .productsHeader {
+            margin: 0 0 2rem 5rem;
+
+            span {
+                color: var(--black);
+                font-size: 1.3rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+                line-height: 2.7rem;
+            }
+        }
+
+        .productsList {
+            display: flex;
+            align-items: center;
+            overflow-x: scroll;
+            padding: 0 3rem 2rem 5rem;
+
+            .productsItem {
+                margin-right: 2rem;
+
+                .imgContainer {
+                    background-color: var(--gray-100);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+                    width: 18rem;
+                    height: 20rem;
+
+                    img {
+                        height: 22rem;
+                    }
+                }
+
+                .productsRow {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 1rem;
+
+                    .productsInfo {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        span {
+                            color: var(--black);
+                            font-size: 1.3rem;
+                        }
+                        
+                        strong {
+                            color: var(--black);
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    .cartButton {
+                        background-color: var(--black);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        transition: 250ms;
+                        width: 3rem;
+                        height: 3rem;
+                        border-radius: 1.5rem;
+                        margin-left: auto;
+
+                        &:hover {
+                            filter: brightness(0.8);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
