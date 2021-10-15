@@ -17,9 +17,9 @@ export default function App () {
 
       {/* <Product /> */}
 
-      <ProductList />
+      {/* <ProductList /> */}
 
-      {/* <Cart /> */}
+      <Cart />
     </div>
   )
 }

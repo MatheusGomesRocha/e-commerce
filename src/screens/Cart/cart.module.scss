@@ -129,3 +129,47 @@
         }
     }
 }
+
+@media(max-width: 1000px) {
+    .container {
+        flex-direction: column-reverse;
+
+        .cartProductsArea {
+            width: 100%;
+
+            .header {
+                span {
+                    display: none;
+                }
+            }
+
+            .cartItem {
+                margin: 0;
+                justify-content: center;
+
+                .checkbox {
+                    display: none;
+                }
+
+                .imgContainer {
+                    width: 6rem;
+                    height: 6rem;
+
+                    img {
+                        width: 6rem;
+                        height: 6rem;
+                    }
+                }
+            }
+
+            h2 {
+                display: none;
+            }
+        }
+
+        .sideArea {
+            width: 100%;
+            margin: 0 0 2rem 0;
+        }
+    }
+}
