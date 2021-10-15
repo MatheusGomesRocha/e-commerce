@@ -202,8 +202,8 @@
 
                     img {
                         object-fit: contain;
-                        height: 30rem;
                         width: 20rem;
+                        height: 30rem;
                     }
                 }
 
@@ -221,8 +221,104 @@
     }
 }
 
+@media(max-width: 700px) {
+    .container {
+        margin-top: 1rem;
+        padding: 0 1rem;
+
+        .title {
+            margin: 1rem 0;
+        }
+
+        .searchArea {
+            .inputArea {
+                width: 90%;
+
+                .searchFilterArea {
+                    display: none;
+                }
+            }
+        }
+
+        .searchInfo {
+            flex-direction: column;
+
+            .searchVisibilityMode {
+                margin-top: 1rem;
+
+                .searchVisibilityModeItem {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .contentRow {
+            flex-direction: column;
+
+            .contentFilterArea {
+                width: 100%;
+            }
+
+            .contentProductArea {
+                grid-template-columns: 1fr;
+                margin: 2rem 0 0 0;
+
+                .productItem {
+                    span {
+                        font-size: 1.1rem;
+                    }
+
+                    h2 {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 701px) and (max-width: 900px) {
+    .container {
+        margin: 0;
+
+        .searchArea {
+            .inputArea {
+                .searchFilterArea {
+                    .searchFilterItem {
+                        width: auto;
+                        padding: 0 .6rem;
+                    }
+                }
+            }
+        }
+        .contentRow {
+            flex-direction: column;
+
+            .contentFilterArea {
+                width: 100%;
+            }
+
+            .contentProductArea {
+                grid-template-columns: repeat(2, 1fr);
+                margin: 3rem 0 0 0;
+            }
+        }
+    }
+}
+
+@media(min-width: 901px) and (max-width: 1150px) {
+    .container {
+        .contentRow {
+            .contentProductArea {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
 @media(min-width: 2000px) {
     .container {
         padding: 0 25rem;
     }
 } 
+

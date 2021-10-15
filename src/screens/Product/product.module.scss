@@ -176,7 +176,7 @@
     }
 }
 
-@media(max-width: 800px) {
+@media(max-width: 900px) {
     .container {
         flex-direction: column;
         height: auto;
@@ -208,7 +208,7 @@
 
             img {
                 width: 100%;
-                object-fit: cover;
+                object-fit: contain;
             }
         }
     }
