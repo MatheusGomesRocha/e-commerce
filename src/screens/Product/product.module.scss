@@ -175,3 +175,41 @@
         }
     }
 }
+
+@media(max-width: 800px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        margin-top: 0;
+    
+        .sideContent {
+            width: 100%;
+            margin: 0 0 0 1rem;
+            
+            .sideFooter {
+                margin: 2rem 2rem 0 0;
+            }
+
+            .sideButtonArea {
+                margin-top: 2rem;
+                width: calc(100% - 3rem);
+
+                .addCart {
+                    width: 100%;
+                }
+            }
+        }
+    
+        .imgContainer {
+            border-left: 0;
+            border-right: 0;
+            margin-top: 2rem;
+            width: 100%;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

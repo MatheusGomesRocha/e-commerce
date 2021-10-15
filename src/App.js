@@ -13,9 +13,9 @@ export default function App () {
     <div>
       <Header />
 
-      <Home />
+      {/* <Home /> */}
 
-      {/* <Product /> */}
+      <Product />
 
       {/* <ProductList /> */}
 
